@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+html {
+    font-size: 62.5%
+}
+
+@media only screen and (min-width: 100em) {
+    html {
+        font-size:.62vw
+    }
+}
+
+body {
+    font-family: nobel,sans-serif;
+    font-weight: 300;
+    font-style: normal
+}
+
+header {
+    height: 50rem;
+    background-image: url(images/watermark.cbd5ecdd40805f633d725ad8b98908b1.svg);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+header img {
+    max-width: 36rem;
+    width: 100%
+}
+
+@media only screen and (max-width: 55em) {
+    header {
+        height:30rem;
+        background-size: 40%
+    }
+
+    header img {
+        max-width: 30rem
+    }
+}
+
+@media only screen and (max-width: 35em) {
+    header {
+        height:20rem;
+        background-size: 40%
+    }
+
+    header img {
+        max-width: 50%
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    header {
+        height:15rem;
+        background-size: 30%
+    }
+
+    header img {
+        max-width: 50%
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 102.4rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin: 0 auto
+}
+
+@media only screen and (max-width: 55em) {
+    .container {
+        width:90%;
+        padding: 0
+    }
+}
+
+section.about {
+    padding: 5rem 0;
+    position: relative
+}
+
+section.about .container {
+    display: flex
+}
+
+@media only screen and (max-width: 55em) {
+    section.about {
+        padding:0
+    }
+
+    section.about .container {
+        flex-direction: column;
+        width: 100%
+    }
+}
+
+section.about .background-colors {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1
+}
+
+section.about .background-colors .left-color {
+    flex: 0 0 44%;
+    background-color: #013542
+}
+
+section.about .background-colors .right-color {
+    flex: 0 0 56%;
+    background-color: #f4f4f4
+}
+
+@media only screen and (max-width: 55em) {
+    section.about .background-colors {
+        display:none
+    }
+}
+
+section.about .left {
+    flex: 0 0 45%;
+    padding-right: 10rem;
+    box-sizing: border-box
+}
+
+@media only screen and (max-width: 55em) {
+    section.about .left {
+        flex:0 0 100%;
+        width: 100%;
+        background-color: #013542;
+        padding: 5rem 5%
+    }
+}
+
+.left h1 {
+    font-family: nobel,sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 1.8
+}
+
+.left h1:after {
+    content: "";
+    display: block;
+    width: 2.8rem;
+    height: 2px;
+    background-color: #f4772f;
+    margin: 2.5rem 0
+}
+
+.left p {
+    font-family: nobel,sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: .04rem;
+    line-height: 2
+}
+
+@media only screen and (max-width: 35em) {
+    .left h1 {
+        font-size:2rem
+    }
+
+    .left h1,.left p {
+        line-height: 1.6
+    }
+}
+
+section.about .right {
+    flex: 0 0 55%;
+    padding-left: 2.4rem;
+    box-sizing: border-box
+}
+
+@media only screen and (max-width: 55em) {
+    section.about .right {
+        background-color:#f4f4f4;
+        padding: 5rem 5%
+    }
+}
+
+.right h1 {
+    font-family: nobel,sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    color: #3b3b3c;
+    letter-spacing: 0;
+    line-height: 1.8;
+    margin-bottom: 2.75rem
+}
+
+.right h1:after {
+    content: "";
+    display: block;
+    width: 2.8rem;
+    height: 2px;
+    background-color: #f4772f;
+    margin: 2.5rem 0
+}
+
+.right p {
+    font-family: nobel,sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #3b3b3c;
+    letter-spacing: .04rem;
+    line-height: 1.8;
+    margin-bottom: 5rem
+}
+
+@media only screen and (max-width: 35em) {
+    .right h1 {
+        font-size:2rem;
+        margin-bottom: 2.75rem
+    }
+
+    .right h1,.right p {
+        line-height: 1.6
+    }
+}
+
+ul.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-position: inside;
+    list-style-type: none
+}
+
+li:before {
+    content: "+";
+    display: block;
+    color: #f4772f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700
+}
+
+li,li:before {
+    font-size: 1.6rem
+}
+
+li {
+    position: relative;
+    flex: 0 0 50%;
+    font-family: nobel,sans-serif;
+    font-weight: 300;
+    color: #3b3b3c;
+    letter-spacing: 0;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    padding-left: 2.4rem;
+    box-sizing: border-box
+}
+
+li span.subhead {
+    display: block;
+    color: grey
+}
+
+@media only screen and (max-width: 35em) {
+    li {
+        flex:0 0 100%
+    }
+}
+
+section.testimonials {
+    background-color: #fff;
+    padding: 10rem 0 0
+}
+
+section.testimonials .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around
+}
+
+@media only screen and (max-width: 55em) {
+    section.testimonials {
+        padding:5rem 0 2.5rem
+    }
+
+    section.testimonials .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start
+    }
+}
+
+.testimonial {
+    flex: 0 0 40%;
+    padding: 0 0 0 3rem;
+    box-sizing: border-box;
+    border-left: 2px solid #ff5700;
+    margin-bottom: 10rem
+}
+
+.testimonial h3 {
+    font-family: nobel,sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #3b3b3c;
+    letter-spacing: 0;
+    line-height: 2
+}
+
+.testimonial:nth-of-type(2n+0) {
+    border-left: 2px solid #013542
+}
+
+@media only screen and (max-width: 55em) {
+    .testimonial {
+        flex:0 0 100%;
+        padding: 0 0 0 3rem;
+        margin-bottom: 2.5rem
+    }
+}
+
+@media only screen and (max-width: 35em) {
+    .testimonial {
+        padding:0 0 0 2rem
+    }
+
+    .testimonial h3 {
+        line-height: 1.7;
+        font-size: 1.5rem
+    }
+}
+
+section.corporate-profile {
+    background-color: #013542;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #d8d8d8;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box
+}
+
+@media only screen and (min-width: 55em) {
+    section.corporate-profile {
+        flex-direction:row;
+        padding: 10rem 0
+    }
+}
+
+section.corporate-profile div {
+    text-align: center;
+    padding: 5rem 2rem
+}
+
+@media only screen and (min-width: 55em) {
+    section.corporate-profile div {
+        padding:0 15rem
+    }
+}
+
+section.corporate-profile div:not(:first-child) {
+    border-top: 1px solid #32545c
+}
+
+@media only screen and (min-width: 55em) {
+    section.corporate-profile div:not(:first-child) {
+        border-left:1px solid #32545c;
+        border-top: 0;
+        margin-top: 0
+    }
+}
+
+a.button {
+    padding: 1.5rem 2.75rem;
+    background-color: #ff5700;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 2rem;
+    line-height: 1;
+    transition: all .25s ease-out
+}
+
+a.button:active,a.button:focus,a.button:hover {
+    background-color: #ff661a
+}
+
+footer {
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 4.5rem 0
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+footer h5 {
+    font-family: nobel,sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #013542;
+    letter-spacing: 0;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0
+}
+
+footer .contact-links {
+    display: flex
+}
+
+footer .contact-links p {
+    margin-left: 4rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #3b3b3c;
+    letter-spacing: 0;
+    line-height: 1.4
+}
+
+footer .contact-links a {
+    margin-left: 4rem
+}
+
+footer .contact-links a svg {
+    transition: all .3s ease;
+    height: 2rem;
+    fill: #3b3b3c
+}
+
+footer .contact-links a:active svg,footer .contact-links a:focus svg,footer .contact-links a:hover svg {
+    fill: #f4772f
+}
+
+@media only screen and (max-width: 40em) {
+    footer .container {
+        justify-content:center
+    }
+
+    footer .contact-links,footer .container {
+        flex-direction: column;
+        align-items: center
+    }
+
+    footer .contact-links a,footer .contact-links p {
+        margin: 1rem 0
+    }
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center
+}
+
+.error h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem
+}
+
+.error p {
+    font-size: 2rem
+}
+
+.error a {
+    color: #ff5700
+}
